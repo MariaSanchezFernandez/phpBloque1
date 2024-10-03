@@ -137,26 +137,36 @@
     //     echo "<option>$i</option>";
     // }
 
-    // echo '<br><br>';
-
     //10. Define tres arrays de 20 números enteros cada uno, con nombres “numero”, “cuadrado” y “cubo”. - Carga el array “numero” con valores aleatorios entre 0 y 19. - En el array “cuadrado” se deben almacenar los cuadrados de los valores que hay en el 	array “numero”. - En el array “cubo” se deben almacenar los cubos de los valores que hay en “numero”.
 
     echo 'EJERCICIO 10';
     echo '<br>';
 
-    $numero = rand(0,19);
-    $cuadrado = $numero * $numero;
-    $cubo =  $numero * $numero * $numero;
-
-    echo $numero;
-    echo '<br>';
-    echo $cuadrado;
-    echo '<br>';
-    echo $cubo;
-
+    $numero = array();
+    $cuadrado = array();
+    $cubo = array();
+    
+    for ($i = 0; $i < 20; $i++) {
+        $numero[$i] = rand(0, 19);
+        $cuadrado[$i] = $numero[$i] ** 2;
+        $cubo[$i] = $numero[$i] ** 3;
+    }
+    
+    for ($i = 0; $i < 20; $i++) {
+        echo "Números: " . $numero[$i] . " / " . $cuadrado[$i] . " / " . $cubo[$i] . "<br>";
+    }
+    
     echo '<br><br>';
 
     //11. Escribe un script que genere 100 números enteros aleatorios entre 0 y 100 y que los almacene en un array bidimensional. El script debe luego mostrar por separado todos los números pares seguidos, y todos los números impares seguidos
+    
+    echo 'EJERCICIO 11';
+    echo '<br>'
+    
+    
+    ;
+    echo '<br><br>';
+
     //12. Crear un array de 4 filas por 5 columnas con los nombres de los alumnos ordenados según el sitio que ocupan en clase. Recorrerlo e imprimirlo en una tabla
 
     echo 'EJERCICIO 12';
