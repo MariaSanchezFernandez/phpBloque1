@@ -128,14 +128,18 @@
 
     //9. Generar una lista desplegable (select) con todos los años entre 2020 y 2040.
 
-    // echo 'EJERCICIO 9';
-    // echo '<br>';
+    echo 'EJERCICIO 9';
+    echo '<br>';
 
-    // echo '<select>';
+    echo '<select>';
 
-    // for ($i=2020; $i <= 2040 ; $i++) {
-    //     echo "<option>$i</option>";
-    // }
+    for ($i=2020; $i <= 2040 ; $i++) {
+        echo "<option>$i</option>";
+    }
+
+    echo '</select>';
+
+    echo '<br><br>';
 
     //10. Define tres arrays de 20 números enteros cada uno, con nombres “numero”, “cuadrado” y “cubo”. - Carga el array “numero” con valores aleatorios entre 0 y 19. - En el array “cuadrado” se deben almacenar los cuadrados de los valores que hay en el 	array “numero”. - En el array “cubo” se deben almacenar los cubos de los valores que hay en “numero”.
 
