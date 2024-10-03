@@ -165,10 +165,36 @@
     //11. Escribe un script que genere 100 números enteros aleatorios entre 0 y 100 y que los almacene en un array bidimensional. El script debe luego mostrar por separado todos los números pares seguidos, y todos los números impares seguidos
     
     echo 'EJERCICIO 11';
-    echo '<br>'
+    echo '<br>';
     
+    echo 'EJERCICIO 11';
+    echo '<br>';
     
-    ;
+    $numeros = [];
+    $pares = [];
+    $impares = [];
+    
+    for ($i = 0; $i < 10; $i++) {
+        for ($j = 0; $j < 10; $j++) {
+            $numeros[$i][$j] = rand(0, 100);
+    
+            if ($numeros[$i][$j] % 2 == 0) {
+                $pares[] = $numeros[$i][$j];
+            } else {
+                $impares[] = $numeros[$i][$j];
+            }
+        }
+    }
+    
+    foreach ($pares as $par) {
+        echo $par . ' ';
+    }
+    echo '<br><br>';
+    
+    foreach ($impares as $impar) {
+        echo $impar . ' ';
+    }
+    
     echo '<br><br>';
 
     //12. Crear un array de 4 filas por 5 columnas con los nombres de los alumnos ordenados según el sitio que ocupan en clase. Recorrerlo e imprimirlo en una tabla
@@ -193,6 +219,4 @@
         echo "</tr>";
     }
     echo "</table>";
-
-
 ?>
