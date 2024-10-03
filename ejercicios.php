@@ -1,49 +1,49 @@
 <?php
-      
+
     //1 . Almacenar en un array los nombres de los alumnos de clase y mostrarla con una lista html, como lista desordenada.
 
     $array = ["Julian", "Jose", "Sergio", "Sandra", "María", "Javier", "Blas", "Juanfran", "Trillo", "Salva"];
 
     echo "<ul>";
-    for ($i=0; $i < count($array); $i++) { 
+    for ($i=0; $i < count($array); $i++) {
         echo "<li>" . $array[$i];
     }
 
     //2. Escribe en un array asociativo los nombres (como claves) y apellidos (valores) de los alumnos de clase. Luego usar las etiquetas <dl>, <dd> y <dt> de HTML5 para mostrarlos.
-    
+
     $nombres = ["Julian", "Jose", "Sergio", "Sandra", "María", "Javier", "Blas", "Juanfran", "Trillo", "Salva"];
     $apellidos = ["Gamez", "Borras", "Melero", "Martinez", "Sánchez", "Gomez", "Exposito", "Fernández", "Exposito"];
 
-    for ($i=0; $i < count($nombres) ; $i++) { 
-        for ($f=0; $f < count($apellidos); $f++) { 
+    for ($i=0; $i < count($nombres) ; $i++) {
+        for ($f=0; $f < count($apellidos); $f++) {
             echo "<dl>" . $nombres[$i] ;
             echo "<dt>" . $apellidos[$f] . "<dt>";
         }
     }
     echo "<dl>";
 
-    //3. Generar un valor entero aleatorio entre 1 y 100. Para ello usaremos la función rand, que devuelve un valor aleatorio entre un rango de dos enteros: $num=rand(1,100); 
+    //3. Generar un valor entero aleatorio entre 1 y 100. Para ello usaremos la función rand, que devuelve un valor aleatorio entre un rango de dos enteros: $num=rand(1,100);
     echo '<br>';
 
     echo 'EJERCICIO 3';
     echo '<br>';
 
-    $random1 = rand(1, 100); 
-    
+    $random1 = rand(1, 100);
+
     if ($random1 <= 50) {
        echo "Nuestro número random es {$random1} y es menor que 50";
     } else {
         echo "Nuestro número random es {$random1} y es mayor que 50";
-    }   
+    }
 
     echo '<br>';
 
-   //4. Generar un valor aleatorio entre 1 y 100. Luego mostrar si tiene 1, 2 o 3 dígitos. 
+   //4. Generar un valor aleatorio entre 1 y 100. Luego mostrar si tiene 1, 2 o 3 dígitos.
    echo '<br>';
    echo 'EJERCICIO 4';
    echo '<br>';
 
-   $random2 = rand(1, 10000); 
+   $random2 = rand(1, 10000);
 
    echo "Nuestro segundo número es {$random2} y ";
    if ($random2 < 10 ) {
@@ -55,8 +55,8 @@
    } else{
     echo 'El número tiene 4 cifras';
    }
-   
-   //5. Generar un valor aleatorio entre 1 y 5. Luego imprimir el nombre del número (Ej. si se genera el 3 luego mostrar en la página el string "tres"). 
+
+   //5. Generar un valor aleatorio entre 1 y 5. Luego imprimir el nombre del número (Ej. si se genera el 3 luego mostrar en la página el string "tres").
 
    echo '<br><br>';
 
@@ -84,10 +84,10 @@
     default:
         break;
    }
-   
+
    echo '<br><br>';
     //7
-    
+
     echo 'EJERCICIO 7';
     echo '<br>';
 
@@ -128,9 +128,57 @@
 
     //9. Generar una lista desplegable (select) con todos los años entre 2020 y 2040.
 
-    //10. Define tres arrays de 20 números enteros cada uno, con nombres “numero”, “cuadrado” y “cubo”. - Carga el array “numero” con valores aleatorios entre 0 y 19. - En el array “cuadrado” se deben almacenar los cuadrados de los valores que hay en el 	array “numero”. - En el array “cubo” se deben almacenar los cubos de los valores que hay en “numero”. 
+    // echo 'EJERCICIO 9';
+    // echo '<br>';
 
-    //11. Escribe un script que genere 100 números enteros aleatorios entre 0 y 100 y que los almacene en un array bidimensional. El script debe luego mostrar por separado todos los números pares seguidos, y todos los números impares seguidos.
+    // echo '<select>';
 
+    // for ($i=2020; $i <= 2040 ; $i++) {
+    //     echo "<option>$i</option>";
+    // }
+
+    // echo '<br><br>';
+
+    //10. Define tres arrays de 20 números enteros cada uno, con nombres “numero”, “cuadrado” y “cubo”. - Carga el array “numero” con valores aleatorios entre 0 y 19. - En el array “cuadrado” se deben almacenar los cuadrados de los valores que hay en el 	array “numero”. - En el array “cubo” se deben almacenar los cubos de los valores que hay en “numero”.
+
+    echo 'EJERCICIO 10';
+    echo '<br>';
+
+    $numero = rand(0,19);
+    $cuadrado = $numero * $numero;
+    $cubo =  $numero * $numero * $numero;
+
+    echo $numero;
+    echo '<br>';
+    echo $cuadrado;
+    echo '<br>';
+    echo $cubo;
+
+    echo '<br><br>';
+
+    //11. Escribe un script que genere 100 números enteros aleatorios entre 0 y 100 y que los almacene en un array bidimensional. El script debe luego mostrar por separado todos los números pares seguidos, y todos los números impares seguidos
     //12. Crear un array de 4 filas por 5 columnas con los nombres de los alumnos ordenados según el sitio que ocupan en clase. Recorrerlo e imprimirlo en una tabla
+
+    echo 'EJERCICIO 12';
+    echo '<br>';
+
+    $matriz =[
+        ["Daniel", "Mari", "SergioG", "SergioC", ""],
+        ["Javi", "Julian", "Trillo", "Josema", "Blas"],
+        ["Marcos", "Juan", "Salva", "JoseL", "Juanfran"],
+        ["","María", "JoseB", "Sandra", ""]
+    ];
+
+    echo "<table border='1'>";
+
+    for ($i = 0; $i < count($matriz); $i++) {
+        echo "<tr>";
+        for ($f = 0; $f < count($matriz[$i]); $f++) {
+            echo "<td>" . $matriz[$i][$f] . "</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table>";
+
+
 ?>
